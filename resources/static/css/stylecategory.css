@@ -1,0 +1,185 @@
+
+
+
+.bodyform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background: #4e555b;*/
+}
+
+.categoryCont{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+}
+
+.categoryCont .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 35px;
+    overflow:visible;
+    /*background-color: #F58F7C;*/
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    background: rgb(137,207,240);
+    background: linear-gradient(135deg, rgba(137,207,240,1) 0%, rgba(255,186,210,1) 77%);
+}
+
+
+.categoryCont .box::before {
+    content: 'Pet';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 6em;
+    font-weight: 900;
+    color: #F58F7C;
+    font-style: italic;
+    opacity: 0.5;
+    transition: 0.5s ;
+}
+
+.categoryCont .box::after {
+    content: 'World';
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    color: #F58F7C;
+    font-style: italic;
+    opacity: 0.5;
+    transition: 0.5s ;
+}
+
+.categoryCont .box:hover::before, .categoryCont .box:hover::after{
+    opacity: 0;
+}
+
+.categoryCont .box .name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #FAED26;
+    text-shadow: -1px 0 #46344E, 0 1px #46344E, 1px 0 #46344E, 0 -1px #46344E;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.categoryCont .box:hover .name {
+    font-size: 40px;
+    top: 40px;
+    opacity: 1;
+}
+
+.categoryCont .box .manufacturer {
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    /*text-align: center;*/
+    color: white;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px) rotate(-25deg);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 5;
+
+}
+
+.categoryCont .box:hover .manufacturer {
+    /*   top: 40px;   */
+    opacity: 0.5;
+}
+
+.categoryCont .box .price {
+    position: absolute;
+    bottom: 140px;
+    left: 100px;
+    /*text-align: center;*/
+    color: white;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px) rotate(-25deg);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 5;
+
+}
+
+.categoryCont .box:hover .price {
+    /*   top: 40px;   */
+    opacity: 0.5;
+}
+
+.categoryCont .box .buy {
+    background: #89CFF0;
+    color: #46344E;
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    font-size: 26px;
+    padding: 3px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.categoryCont .box:hover .buy {
+    bottom: 27px;
+    opacity: 1;
+}
+
+.categoryCont .box .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: white;
+    transform-style: preserve-3d;
+    z-index: 9;
+    opacity: 0;
+    transform: translate3d(-50%,-50%,50px);
+}
+.categoryCont .box:hover .circle {
+    opacity: 0;
+/*    todo removed the circle*/
+}
+
+.categoryCont .box .product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-height: 290px;
+    max-width: 300px;
+    transition: 0.5s;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,50px) rotate(-10deg);
+
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+
+}

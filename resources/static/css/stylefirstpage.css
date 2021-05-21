@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.bg-nav {
+    background-color: rgba(65, 1, 81, 0.95);
+}
+
+.my-index-div {
+    min-height: 56.6vh;
+    max-height: 100%;
+}
+
+.my-register-div {
+    min-height: 85.5vh;
+    max-height: 100%;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+}
+
+.bg-blur {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/opacity/see-through */
+    color: black;
+    font-weight: bold;
+    z-index: 2;
+    width: 100%;
+}
+
+body {
+    background-image: url(/images/background.jpg);
+    /*background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/background.jpg);*/
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.carouselExampleIndicators {
+    height: 500px;
+}
+
+.carousel-item img {
+    height: 500px;
+}
+
+#all-articles-jumbotron {
+    background-image: url("/images/instruments.jpg");
+    background-position: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*font-family: 'Poppins', sans-serif;*/
+}
+
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    font-size: 2.5em;
+    color: #F58F7C;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+header .toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(/images/menu.png);
+    background-color: #F58F7C;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .toggle:before{
+    content: 'Menu';
+    position: absolute;
+    right: 45px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 31px;
+    padding: 2px 5px;
+    background: #F58F7C;
+    color: #FFFFFF;
+
+}
+
+header .toggle.active {
+
+    background: url(/images/close.png);
+    background-color: #F58F7C;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: 25px;
+}
+
+header .toggle.active::before{
+    content: 'Close';
+    background-color: #F58F7C;
+}
+
+.glass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+
+section.active .glass{
+    width: 100%;
+    backdrop-filter: blur(20px);
+    box-shadow: 10px 0 15px rgba(0, 0, 0, 0.5);
+    transition-delay: 0s;
+}
+
+section .content {
+    position: relative;
+    z-index: 10 ;
+    text-align: center;
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+
+section.active .content{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-200px);
+    transition-delay: 0s;
+
+}
+
+section .content h2 {
+    position: relative;
+    /*color: #fff;*/
+    color: rgb(247,110,240);
+    font-size: 10vw;
+    line-height: 0.55em;
+    /*text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);*/
+    font-family: 'Dancing Script', cursive;
+    z-index: 60;
+    text-decoration: none;
+    text-shadow: 5px 4px 5px #89CFF0;
+
+}
+
+section .content h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section .content h2 span {
+    font-size: 0.2em;
+    font-weight: 300;
+    letter-spacing: 5px;
+    background: #89CFF0;
+    color: #46344E;
+    padding: 0 10px;
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+/* This is a single-line comment */
+
+
+
+
+/* This is a single-line comment */
+section .sci {
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+    display: flex;
+    z-index: 100;
+}
+
+section .sci li {
+    list-style: none;
+    margin: 5px;
+    padding: 0 6px;
+    background: #fff;
+    transition: 1s;
+    transition-delay: calc(0.2s * var(--i));
+}
+
+section.active .sci li {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+
+}
+
+
+section .sci li a {
+    color: #111;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+section .navigation{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 49;
+}
+
+section .navigation li {
+    list-style: none;
+    text-align: center;
+    margin: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    transform: translateX(200px);
+    transition-delay: calc(0.2s * var(--i));
+}
+
+section.active .navigation li {
+    pointer-events: auto;
+    opacity: 01;
+    visibility: visible;
+    transform: translateX(0px);
+    transition-delay: calc(0.2s * var(--i));
+}
+
+section .navigation li a {
+    color: #FFFFFF;
+    background: #F58F7C;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    display: inline-block;
+}
+
+section .navigation li a:hover {
+    background: #89CFF0;
+    color: #46344E;
+    letter-spacing: 10px;
+    text-transform: lowercase;
+
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 2-px;
+    }
+    section .sci {
+        bottom: 20px;
+        right: 20px;
+    }
+    .glass{
+        width: 50%;
+    }
+    section .content h2 {
+        font-size: 18vw;
+    }
+    section .content h2 span {
+        font-size: 0.25em;
+        font-weight: 300;
+        letter-spacing: 2px;
+        padding: 0 5px;
+
+    }
+
+}
+
+/* custom colors */
+
+.colorFirst {
+    color: #FAED26;
+}
+.colorSecond {
+    color: #9D8D8f;
+}
+.colorThird {
+    color: #46344E;
+}
+.colorForth {
+    color: #5A5560;
+}
+
+
+
+
+
+

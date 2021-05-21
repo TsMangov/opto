@@ -1,0 +1,194 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+table{
+    border:1px solid #234465;
+    padding-top: 1%;
+    margin: 0 auto;
+    width: 95%;
+    border-radius: 4px;
+}
+table th{
+    background-color: #9D8D8f;
+    color:  #46344E;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom:1px solid black;
+}
+table tbody td{
+    text-align: center;
+    border-bottom:1px solid black;
+    padding: 0.5%;
+}
+
+table tbody tr {
+    background-color: #F2C4CE;
+    color: #46344E;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+/*
+table tbody tr:nth-child(odd){
+    background-color:  #89CFF0;
+    color: #F58F7C;
+    border-bottom: 1px solid black;
+}
+
+table tbody tr:nth-child(odd) button{
+    background: #234465;
+    color:white;
+}
+
+table tbody tr:nth-child(even) button{
+    background: white;
+    color:#234465;
+}
+*/
+
+table tr td:not(:last-child):hover{
+    text-decoration: underline;
+}
+
+table button{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 8%;
+}
+
+table button:hover{
+    text-decoration: underline;
+}
+
+button{
+    margin: 0 auto;
+    display:inline;
+    padding:1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 4px;
+}
+
+label, input{
+    display:block;
+    margin: 0 auto;
+}
+
+form input{
+    margin-bottom: 1%;
+    width: 25%;
+}
+
+form{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+form button{
+    margin: 0 auto;
+    display:block;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-radius: 4px;
+    background-color: #234465;
+    color:white;
+    border: none;
+    padding: 0.5%;
+}
+
+.imgInTable{
+    width: 10rem;
+    height: 7rem;
+    position: static;
+    background-size: contain;
+
+}
+
+.containertop {
+
+    background-color: #89CFF0;
+    position: fixed;
+    top: 76px;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 174px;
+}
+
+.container-cart {
+    position: fixed;
+    background-color: #89CFF0;
+    padding-top: 65px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.main-cart {
+    /*background-color: #89CFF0;*/
+    height: 80%;
+    /*padding-top: 170px;*/
+}
+
+
+.main {
+    background-color: #89CFF0;
+    color: #D6D6D6;
+    padding: 235px 10px 0 10px;
+    z-index: 2;
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.btn {
+    font-weight: bold;
+    width: auto;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    color: #46344E;
+    background: rgb(238,174,202);
+    /*background: linear-gradient(211deg, rgba(137,207,240,1) 0%, rgba(242,196,206,1) 50%, rgba(137,207,240,1) 100%);*/
+    background: radial-gradient(circle, rgba(238,174,202,1) 25%, rgba(148,187,233,1) 100%); cursor: pointer;
+    border: 1px solid #46344E;
+    line-height: 1;
+}
+
+
+.active, .btn:hover {
+    background-color: #46344E;
+    background: #46344E;
+    color: #FAED26;
+}
+
+
+@media only screen and (max-width: 1220px) {
+    .containertop {
+        height: 189px;
+        padding-top: 12px;
+    }
+
+    .main {
+        padding: 250px 10px 0 10px;
+    }
+    .container-cart {
+        padding-top: 75px;
+    }
+
+    /*.main-cart {*/
+    /*    padding-top: 180px;*/
+    /*}*/
+}
+
+@media only screen and (max-width: 550px) {
+    .main {
+        padding: 321px 10px 0 10px;
+    }
+
+    .containertop {
+        height: 260px;
+    }
+}
